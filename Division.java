@@ -22,7 +22,7 @@ public class Division
     }
 
     /**
-     * This method adds teams to the division.
+     * This method adds a team to the division.
      */
     public void addTeam(String teamName)
     {
