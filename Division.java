@@ -92,32 +92,32 @@ public class Division
         Team furplc = teams.get(0);
         Team fitplc = teams.get(0);
         
-        for(int i = 0; i < 4; i++){
+        for(int i = 0; i <= 4; i++){
             if(fplc.getScore() < teams.get(i).getScore()){
                 fplc = teams.get(i);
             }
         }
-        for(int i = 0; i < 4; i++){
+        for(int i = 0; i <= 4; i++){
             if(splc.getScore() < teams.get(i).getScore() && 
-            splc.getScore() < fplc.getScore()){
+            teams.get(i).getScore() < fplc.getScore()){
                 splc = teams.get(i);
             }
         }
-        for(int i = 0; i < 4; i++){
+        for(int i = 0; i <= 4; i++){
             if(tplc.getScore() < teams.get(i).getScore() && 
-            tplc.getScore() < splc.getScore()){
+            teams.get(i).getScore() < splc.getScore()){
                 tplc = teams.get(i);
             }
         }
-        for(int i = 0; i < 4; i++){
+        for(int i = 0; i <= 4; i++){
             if(furplc.getScore() < teams.get(i).getScore() && 
-            furplc.getScore() < tplc.getScore()){
+            teams.get(i).getScore() < tplc.getScore()){
                 furplc = teams.get(i);
             }
         }
-        for(int i = 0; i < 4; i++){
+        for(int i = 0; i <= 4; i++){
             if(fitplc.getScore() < teams.get(i).getScore() && 
-            fitplc.getScore() < furplc.getScore()){
+            teams.get(i).getScore() < furplc.getScore()){
                 fitplc = teams.get(i);
             }
         }
