@@ -139,4 +139,14 @@ public class League
         return name;
     }
     
+    /**
+     * This method displays the standings of the teams within the division
+     * at the specified index.
+     */
+    public void divisionStanding(int index)
+    {
+        //code goes here
+        divisions.get(index).calculateStanding();
+    }
+    
 }
