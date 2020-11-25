@@ -27,36 +27,48 @@ public class Match
         home = home;
         away = away;
     } 
-    //addMatch takes two teams (from the same division) and the score and adds the game to the division.
-    public void addMatch(String homeTeam, String awayTeam, int set1hometeampoints, int set2hometeampoints,int set3hometeampoints, 
-    int set4hometeampoints, int set5hometeampoints)
+    
+    public void game(int set1hometeampoints, int set2hometeampoints,
+    int set3hometeampoints, int set4hometeampoints, int set5hometeampoints,
+    int set1awayteampoints, int set2awayteampoints, int set3awayteampoints, 
+    int set4awayteampoints, int set5awayteampoints)
     { 
         if (set1hometeampoints == 21){
             setsWonHT ++;
-        } else{
+        } else if(set1awayteampoints == 21){
             setsWonAT ++;             
         } 
         if (set2hometeampoints == 21){
             setsWonHT ++;
-        } else{
+        } else if(set2awayteampoints == 21){
             setsWonAT ++;             
         } 
         if (set3hometeampoints == 21){
             setsWonHT ++;
-        } else{
+        } else if(set3awayteampoints == 21){
             setsWonAT ++;             
         }
         if (set4hometeampoints == 21){
             setsWonHT ++;
-        } else{
+        } else if(set4awayteampoints == 21){
             setsWonAT ++;             
         } 
         if (set5hometeampoints == 15){
             setsWonHT ++;
-        } else{
+        } else if(set5awayteampoints == 21){
             setsWonAT ++;             
         }
-    }  
+    }   
+          
+    public int getsetsWonHomeTeam() 
+    {
+        return setsWonHT;
+    } 
+    
+    public int getsetsWonAwayTeam() 
+    {
+        return setsWonAT;
+    }        
         
     public int getsetsWonHomeTeam() 
     {
