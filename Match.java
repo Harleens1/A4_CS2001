@@ -17,7 +17,9 @@ public class Match
     private int setsWonAT;
 
     /**
-     * Constructor for objects of class match
+     * Constructor for objects of class match. 
+     * Creates a home and away team
+     * and initializes sets won. HT = home team, AT = away team
      */
     public Match(Team home, Team away)
     {
@@ -28,6 +30,11 @@ public class Match
         away = away;
     } 
     
+    /**
+    * This class recieves points scored by both teams
+    * in all the different sets, and
+    * updates the sets won accordingly 
+    */
     public void game(int set1hometeampoints, int set2hometeampoints,
     int set3hometeampoints, int set4hometeampoints, int set5hometeampoints,
     int set1awayteampoints, int set2awayteampoints, int set3awayteampoints, 
@@ -55,20 +62,25 @@ public class Match
         } 
         if (set5hometeampoints == 15){
             setsWonHT ++;
-        } else if(set5awayteampoints == 21){
+        } else if(set5awayteampoints == 15){
             setsWonAT ++;             
         }
     }   
-          
+    
+    /**
+    *  returns the sets won by the Home team
+    */
     public int getsetsWonHomeTeam() 
     {
         return setsWonHT;
     } 
     
+    /**
+    *  returns the sets won by the Away team
+    */
     public int getsetsWonAwayTeam() 
     {
         return setsWonAT;
     }        
-      
-            
+              
 }
