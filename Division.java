@@ -6,7 +6,7 @@ import java.util.ArrayList;
  */
 public class Division
 {
-    // instance variables - replace the example below with your own
+    // instance variables 
     private String name;
     private ArrayList<Team> teams;
     private ArrayList<Match> matches;
