@@ -56,6 +56,17 @@ public class Match
         } else{
             setsWonAT ++;             
         }
-    }   
+    }  
+        
+    public int getsetsWonHomeTeam() 
+    {
+        return setsWonHT;
+    } 
+    
+    public int getsetsWonAwayTeam() 
+    {
+        return setsWonAT;
+    }
+      
             
 }
