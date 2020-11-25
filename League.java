@@ -77,5 +77,11 @@ public class League
     public void addCoach(String name, int i) 
     { 
         Coach c = new Coach(name, i);
+    } 
+    
+    public String getLeagueName() 
+    {
+        return name;
     }
+    
 }
