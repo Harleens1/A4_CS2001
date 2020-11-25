@@ -47,22 +47,23 @@ public class League
         divisions.get(2).addTeam("Team3");
         divisions.get(2).addTeam("Team4");
         divisions.get(2).addTeam("Team5");   
-        int players = 1; 
-        int teams = 1;
-        int div = 1;
-        while(players<=12 && div<=3){
-            divisions.get(div).getTeam(teams).addPlayer("player" + players, players); 
-            int c = 0; 
-            while(c<2){
-                divisions.get(div).getTeam(teams).addCoach("Coach" + c, c);
+        int p = 1; 
+        int t = 1;
+        int d = 1;
+        while(p<=12 && d<=3){
+            divisions.get(d).getTeam(t).addPlayer("player" + p, p); 
+            int c = 1; 
+            if(c<=2){
+                divisions.get(d).getTeam(t).addCoach("Coach" + c, c); 
+                c++;
             }
-            players++; 
-            if(players == 12){
-                teams++; 
-                players = 0; 
-                if(teams==5){
-                    div++; 
-                    teams = 0;
+            p++; 
+            if(p == 12){
+                t++; 
+                p = 0; 
+                if(t==5){
+                    d++; 
+                    t = 0;
                 }
             }
         }
