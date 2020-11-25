@@ -61,4 +61,10 @@ public class Team
     {
         return score;
     }
+    
+    
+    public String getTeamName()
+    {
+        return name;
+    }
 }
