@@ -1,5 +1,4 @@
 
-
 /**
  * The Match class creates a scoreboard for a match between two teams.
  * Each match is played until one team wins 3 sets. A set is won by the
@@ -12,22 +11,51 @@
 public class Match
 {
     // instance variables - replace the example below with your own
-    private int sets;
-    private int points1;
-    private int points2;
-    private Team team1;
-    private Team team2;
+    private Team home;
+    private Team away; 
+    private int setsWonHT; 
+    private int setsWonAT;
 
     /**
      * Constructor for objects of class match
      */
-    public Match(int sets, int points1, int points2, Team team1, Team team2)
+    public Match(Team home, Team away)
     {
         // initialise instance variables
-        sets = sets;
-        points1 = points1;
-        points2 = points2;
-        team1 = team1;
-        team2 = team2;
-    }
+        setsWonHT = 0; 
+        setsWonAT = 0;
+        home = home;
+        away = away;
+    } 
+    //addMatch takes two teams (from the same division) and the score and adds the game to the division.
+    public void addMatch(String homeTeam, String awayTeam, int set1hometeampoints, int set2hometeampoints,int set3hometeampoints, 
+    int set4hometeampoints, int set5hometeampoints)
+    { 
+        if (set1hometeampoints == 21){
+            setsWonHT ++;
+        } else{
+            setsWonAT ++;             
+        } 
+        if (set2hometeampoints == 21){
+            setsWonHT ++;
+        } else{
+            setsWonAT ++;             
+        } 
+        if (set3hometeampoints == 21){
+            setsWonHT ++;
+        } else{
+            setsWonAT ++;             
+        }
+        if (set4hometeampoints == 21){
+            setsWonHT ++;
+        } else{
+            setsWonAT ++;             
+        } 
+        if (set5hometeampoints == 15){
+            setsWonHT ++;
+        } else{
+            setsWonAT ++;             
+        }
+    }   
+            
 }
