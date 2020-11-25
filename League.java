@@ -104,4 +104,21 @@ public class League
         divisions.get(index).calculateStanding();
     }
     
+    /**
+     * This method adds a match to the division of the league at the
+     * specified index. Matches are between two teams of a division.
+     * If a team did not gain any points in a given set, enter 0. HT and
+     * AT are the index values of the two teams.
+     */
+    public void divisionMatch(int index, int HT, int AT, int HTpointsSet1, 
+    int ATpointsSet1, int HTpointsSet2, int ATpointsSet2, int HTpointsSet3, 
+    int ATpointsSet3, int HTpointsSet4, int ATpointsSet4, int HTpointsSet5, 
+    int ATpointsSet5)
+    {
+        //code goes here
+        divisions.get(index).addMatch(HT, AT, HTpointsSet1, ATpointsSet1, 
+        HTpointsSet2, ATpointsSet2, HTpointsSet3, ATpointsSet3, 
+        HTpointsSet4, ATpointsSet4, HTpointsSet5, ATpointsSet5);
+    }
+    
 }
