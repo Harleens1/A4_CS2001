@@ -11,8 +11,6 @@ public class League
     // the divisions in the league.
     private String name;
     private ArrayList<Division> divisions; 
-    private ArrayList<Player> players; 
-    private ArrayList<Coach> coaches;
 
     /**
      * Constructor for objects of class League. Creates an ArrayList
@@ -23,8 +21,6 @@ public class League
         // initialise instance variables
         this.name = name;
         divisions = new ArrayList<>(); 
-        players =  new ArrayList<>(); 
-        coaches = new ArrayList<>();
         divisions.add(new Division("Division1"));
         divisions.add(new Division("Division2"));
         divisions.add(new Division("Division3"));
