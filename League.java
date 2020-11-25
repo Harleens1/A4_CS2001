@@ -52,6 +52,10 @@ public class League
         int div = 1;
         while(players<=12 && div<=3){
             divisions.get(div).getTeam(teams).addPlayer("player" + players, players); 
+            int c = 0; 
+            while(c<2){
+                divisions.get(div).getTeam(teams).addCoach("Coach" + c, c);
+            }
             players++; 
             if(players == 12){
                 teams++; 
