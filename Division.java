@@ -52,4 +52,25 @@ public class Division
     {
         teams.get(index).addCoach(n, id);
     }
+    
+    /**
+     * This method calculates the standings of the various teams in the
+     * division and displays them in a score board.
+     */
+    public void calculateStanding()
+    {
+        // This method will need to iterate over the details of the
+        // various matches in the division, and then using that
+        // information it will construct a score board to be displayed
+        // which will show the rankings of the teams, from first place
+        // to last place.
+        System.out.println();
+        System.out.println("// " + name + " Scoreboard \\");
+        System.out.println("1st Place: ");
+        System.out.println("2nd Place: ");
+        System.out.println("3rd Place: ");
+        System.out.println("4th Place: ");
+        System.out.println("5th Place: ");
+    }
+}
 }
