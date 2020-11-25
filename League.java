@@ -50,50 +50,6 @@ public class League
         int p = 0; 
         int t = 0;
         int d = 0;
-        while(p<12 && d<3){
-            divisions.get(d).getTeam(t).addPlayer("player" + p, p); 
-            int c = 0; 
-            if(c<2){
-                divisions.get(d).getTeam(t).addCoach("Coach" + c, c); 
-                c++;
-            }
-            p++; 
-            if(p == 11){
-                t++; 
-                p = 0; 
-                if(t==4){
-                    d++; 
-                    t = 0;
-                }
-            }
-        }
-    } 
-    
-    // Revised setupLeague method.
-    /**
-     * The setupLeague method creates teams and adds them to the divisions
-     * in the league.
-     */
-    public void setupLeague()
-    {
-        divisions.get(0).addTeam("Team1");
-        divisions.get(0).addTeam("Team2");
-        divisions.get(0).addTeam("Team3");
-        divisions.get(0).addTeam("Team4");
-        divisions.get(0).addTeam("Team5");
-        divisions.get(1).addTeam("Team1");
-        divisions.get(1).addTeam("Team2");
-        divisions.get(1).addTeam("Team3");
-        divisions.get(1).addTeam("Team4");
-        divisions.get(1).addTeam("Team5");
-        divisions.get(2).addTeam("Team1");
-        divisions.get(2).addTeam("Team2");
-        divisions.get(2).addTeam("Team3");
-        divisions.get(2).addTeam("Team4");
-        divisions.get(2).addTeam("Team5");   
-        int p = 0; 
-        int t = 0;
-        int d = 0;
         while(p<=12 && d<3){
             divisions.get(d).getTeam(t).addPlayer("player" + p, p);
             p++; 
@@ -121,8 +77,7 @@ public class League
                 }
             }
         }
-    } 
-    // revised method ends.
+    }
     
     public void addPlayer(String name, int i)
     {
