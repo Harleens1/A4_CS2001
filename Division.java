@@ -86,13 +86,49 @@ public class Division
         // information it will construct a score board to be displayed
         // which will show the rankings of the teams, from first place
         // to last place.
+        Team fplc = teams.get(0);
+        Team splc = teams.get(0);
+        Team tplc = teams.get(0);
+        Team furplc = teams.get(0);
+        Team fitplc = teams.get(0);
+        
+        for(int i = 0; i < 4; i++){
+            if(fplc.getScore() < teams.get(i).getScore()){
+                fplc = teams.get(i);
+            }
+        }
+        for(int i = 0; i < 4; i++){
+            if(splc.getScore() < teams.get(i).getScore() && 
+            splc.getScore() < fplc.getScore()){
+                splc = teams.get(i);
+            }
+        }
+        for(int i = 0; i < 4; i++){
+            if(tplc.getScore() < teams.get(i).getScore() && 
+            tplc.getScore() < splc.getScore()){
+                tplc = teams.get(i);
+            }
+        }
+        for(int i = 0; i < 4; i++){
+            if(furplc.getScore() < teams.get(i).getScore() && 
+            furplc.getScore() < tplc.getScore()){
+                furplc = teams.get(i);
+            }
+        }
+        for(int i = 0; i < 4; i++){
+            if(fitplc.getScore() < teams.get(i).getScore() && 
+            fitplc.getScore() < furplc.getScore()){
+                fitplc = teams.get(i);
+            }
+        }
+              
         System.out.println();
         System.out.println("// " + name + " Scoreboard \\");
-        System.out.println("1st Place: ");
-        System.out.println("2nd Place: ");
-        System.out.println("3rd Place: ");
-        System.out.println("4th Place: ");
-        System.out.println("5th Place: ");
+        System.out.println("1st Place: " + fplc.getTeamName());
+        System.out.println("2nd Place: " + splc.getTeamName());
+        System.out.println("3rd Place: " + tplc.getTeamName());
+        System.out.println("4th Place: " + furplc.getTeamName());
+        System.out.println("5th Place: " + fitplc.getTeamName());
     }
 }
 
