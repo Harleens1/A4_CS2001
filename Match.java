@@ -69,16 +69,6 @@ public class Match
     {
         return setsWonAT;
     }        
-        
-    public int getsetsWonHomeTeam() 
-    {
-        return setsWonHT;
-    } 
-    
-    public int getsetsWonAwayTeam() 
-    {
-        return setsWonAT;
-    }
       
             
 }
