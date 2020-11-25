@@ -46,6 +46,28 @@ public class Division
     }
     
     /**
+     * This method adds a match between two teams to the division.
+     */
+    public void addMatch(int HT, int AT, int HTpointsSet1, int ATpointsSet1,
+    int HTpointsSet2, int ATpointsSet2, int HTpointsSet3, int ATpointsSet3,
+    int HTpointsSet4, int ATpointsSet4, int HTpointsSet5, int ATpointsSet5)
+    { 
+        Team HomeTeam = teams.get(HT);
+        Team AwayTeam = teams.get(AT);
+        matches.add(new Match(HomeTeam, AwayTeam));
+        matches.get(matches.size() - 1).game(HTpointsSet1,
+        HTpointsSet2,HTpointsSet3, HTpointsSet4, HTpointsSet5, ATpointsSet1,
+        ATpointsSet2,ATpointsSet3, ATpointsSet4, ATpointsSet5);
+        int HTpoints = HTpointsSet1 + HTpointsSet2 + HTpointsSet3 
+        + HTpointsSet4 + HTpointsSet5;
+        int ATpoints = ATpointsSet1 + ATpointsSet2 + ATpointsSet3
+        + ATpointsSet4 + ATpointsSet5;
+        HomeTeam.increaseScore(HTpoints);
+        AwayTeam.increaseScore(ATpoints);
+        
+    }
+    
+    /**
      * This method adds a coach to a team within the division.
      */
     public void addTeamCoach(int index, String n, int id)
